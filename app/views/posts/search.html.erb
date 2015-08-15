@@ -1,0 +1,15 @@
+<h1>Search posts</h1>
+  
+<table border=1>
+  <tr>
+    <th>Title</th>
+    <th>content</th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= link_to post.title, post_path(post.id) %></td>
+      <td><%= post.content %></td>
+    </tr>
+  <% end %>
+</table>

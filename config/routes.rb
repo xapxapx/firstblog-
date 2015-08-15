@@ -8,6 +8,9 @@ Blog::Application.routes.draw do
   get "categories/show"
 
   get "home/index" 
+  
+  get "/posts/search" => "posts#search"
+
 	resources :posts
 	resources :categories
   # The priority is based upon order of creation:
